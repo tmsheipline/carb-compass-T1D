@@ -14,3 +14,6 @@ data/carb-compass.db
 # env
 .env
 .env.local
+
+# Claude Code
+.claude/

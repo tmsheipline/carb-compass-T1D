@@ -1,0 +1,16 @@
+# .NET
+bin/
+obj/
+*.user
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# DB
+data/carb-compass.db
+
+# env
+.env
+.env.local

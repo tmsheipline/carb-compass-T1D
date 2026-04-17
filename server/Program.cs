@@ -22,7 +22,8 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
                 "http://localhost:5173",
                 "capacitor://localhost",
-                "http://localhost")
+                "http://localhost",
+                "https://carb-compass-t1d-1.onrender.com")
               .AllowAnyHeader()
               .AllowAnyMethod());
 });

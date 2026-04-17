@@ -3,8 +3,8 @@ import { getAuth } from 'firebase/auth'
 import { Capacitor } from '@capacitor/core'
 
 const baseURL = Capacitor.isNativePlatform()
-  ? 'https://YOUR_PRODUCTION_API_URL/api'  // Replace with your hosted backend URL
-  : '/api'
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : (import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api')
 
 const api = axios.create({ baseURL })
 

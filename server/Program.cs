@@ -13,9 +13,8 @@ builder.Services.AddControllers()
 
 builder.Services.AddOpenApi();
 
-var dbPath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "data", "carb-compass.db"));
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite($"Data Source={dbPath}"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {

@@ -47,6 +47,7 @@ def seed(db_path, data_path):
         CREATE TABLE FavoriteMeals (
             Id        INTEGER PRIMARY KEY AUTOINCREMENT,
             Name      TEXT NOT NULL,
+            UserId    TEXT NOT NULL DEFAULT '',
             CreatedAt TEXT NOT NULL DEFAULT (datetime('now'))
         );
 

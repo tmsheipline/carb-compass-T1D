@@ -18,5 +18,8 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<FoodItem>()
             .HasIndex(f => new { f.BrandOwner, f.Description });
+
+        modelBuilder.Entity<FavoriteMeal>()
+            .HasIndex(f => f.UserId);
     }
 }
